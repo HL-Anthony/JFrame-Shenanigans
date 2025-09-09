@@ -7,6 +7,7 @@ public class JFrameIDcard {
 
 
 
+
     static public void idFrameGen () {
 
 
@@ -57,9 +58,12 @@ public class JFrameIDcard {
                     JTextField ageField = new JTextField();
                     ageField.setPreferredSize(standard);
 
+                    JTextField socialField = new JTextField();
+                    socialField.setPreferredSize(standard);
+
                         // creating a dropdown box for country's
 
-                    String[] county = {"Norway", "USA", "NON of the above"} ;
+                    String[] county = {"","Norway", "USA", "NON of the above"} ;
                     JComboBox<String> countrySelect = new JComboBox<>(county);
                     countrySelect.setPreferredSize(standard);
 
@@ -72,7 +76,7 @@ public class JFrameIDcard {
                                 gbc.gridx = 0;
                                 gbc.gridy = 0;
 
-                            panel.add(new JLabel("name :"), gbc);
+                            panel.add(new JLabel("Name :"), gbc);
 
                                 gbc.gridx = 0;
                                 gbc.gridy = 1;
@@ -80,9 +84,14 @@ public class JFrameIDcard {
                             panel.add(new JLabel("Age :"), gbc);
 
                                 gbc.gridx = 0;
-                                gbc.gridy = 2;
+                                gbc.gridy = 3;
 
                             panel.add(new JLabel("Citizenship (country) :"), gbc);
+
+                                gbc.gridx = 0;
+                                gbc.gridy = 2;
+
+                            panel.add(new JLabel("Social security number :"), gbc);
 
                         gbc.anchor = GridBagConstraints.CENTER;
 
@@ -99,6 +108,10 @@ public class JFrameIDcard {
                                 gbc.gridx = 1;
                                 gbc.gridy = 2;
 
+                            panel.add(socialField,gbc);
+
+                                gbc.gridx = 1;
+                                gbc.gridy = 3;
 
                             panel.add(countrySelect, gbc);
 
