@@ -2,6 +2,8 @@ package mainPackage;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class JFrameIDcard {
 
@@ -33,6 +35,7 @@ public class JFrameIDcard {
 
 
                 JPanel panel = new JPanel(new GridBagLayout());
+
 
 
                 // needed to index positions and add 'padding'
@@ -67,6 +70,23 @@ public class JFrameIDcard {
                     JComboBox<String> countrySelect = new JComboBox<>(county);
                     countrySelect.setPreferredSize(standard);
 
+                        // creating a button
+
+                    JButton Button = new JButton("submit");
+                    Button.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+
+                            String idName = nameField.getText();
+                            String idAge = ageField.getText();
+                            String idSnum = socialField.getText();
+                            String idCountry = countrySelect.getSelectedItem().toString();
+
+                            frame.dispose();
+                            JOptionPane.showMessageDialog(null,"This is your ID "+"\n\n" + "Name : " + idName + "\n" + "Age : " + idAge + "\n" + "Social security number : " + idSnum + "\n" + "Country : " + idCountry);
+                        }
+                    });
+
                     //-----------------------------------------------------------
                         // sets position of all the elements, and ads labels
 
@@ -93,6 +113,7 @@ public class JFrameIDcard {
 
                             panel.add(new JLabel("Social security number :"), gbc);
 
+
                         gbc.anchor = GridBagConstraints.CENTER;
 
                                 gbc.gridx = 1;
@@ -115,14 +136,25 @@ public class JFrameIDcard {
 
                             panel.add(countrySelect, gbc);
 
+                        gbc.anchor = GridBagConstraints.WEST;
 
-                            //----------------------------------------------------------
-                                // sets the necessary final statements
+                                gbc.gridx = 1;
+                                gbc.gridy = 4;
+                                // Lager en ny inset for denne spesifike cellen.
+                                gbc.insets = new Insets(25,0,0,0);
 
-                                frame.add(panel);
+                            panel.add(Button, gbc);
 
-                                // this needs to be at the bottom for the content to be shown on the frame as the frame loads. (if not here : have to resize the frame to see content)
-                                frame.setVisible(true);
+                //---------------------------------------------------------
+
+
+                //----------------------------------------------------------
+                    // sets the necessary final statements
+
+                    frame.add(panel);
+
+                    // this needs to be at the bottom for the content to be shown on the frame as the frame loads. (if not here : have to resize the frame to see content)
+                    frame.setVisible(true);
 
             }
 
