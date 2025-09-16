@@ -107,14 +107,6 @@ public class JFrameIDcard {
                                     idPanel.add(countrySelect, gbc);
 
 
-                    //---------------------Storing input in variables---------------------------------------
-
-                        //String idName = nameField.getText();
-                        //int idAge = Integer.parseInt(ageField.getText());
-                        //long idSocialNum = Long.parseLong(socialField.getText());
-                        //String idCitizen = countrySelect.getSelectedItem().toString();
-
-
                     //----------------------sets the necessary final statements------------------------------------
 
 
