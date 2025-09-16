@@ -4,7 +4,9 @@ public class MainRunClass {
 
     public static void main(String[] args) {
 
-        JFrameIDcard.idFrameGen();
+        JFrameIDcard anthony = new JFrameIDcard();
+
+        anthony.idCard();
 
     }
 }

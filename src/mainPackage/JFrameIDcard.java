@@ -8,7 +8,7 @@ public class JFrameIDcard {
 
 
 
-    static public void idFrameGen () {
+    public void idCard() {
 
 
         // Makes the frame
@@ -105,6 +105,14 @@ public class JFrameIDcard {
 
                                 gbc.gridx = 1; gbc.gridy = 3;
                                     idPanel.add(countrySelect, gbc);
+
+
+                    //---------------------Storing input in variables---------------------------------------
+
+                        //String idName = nameField.getText();
+                        //int idAge = Integer.parseInt(ageField.getText());
+                        //long idSocialNum = Long.parseLong(socialField.getText());
+                        //String idCitizen = countrySelect.getSelectedItem().toString();
 
 
                     //----------------------sets the necessary final statements------------------------------------
