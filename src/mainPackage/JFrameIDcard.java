@@ -67,26 +67,26 @@ public class JFrameIDcard {
 
 
 
-            //-------------------------sets position of all the elements, and ads labels----------------------------------
+            //-------------------------sets position of all the elements, and labels----------------------------------
 
 
                 gbc.anchor = GridBagConstraints.EAST;
 
-                     // indexing the position in the grid for the element
-                        gbc.gridx = 0; gbc.gridy = 0;
-                            idPanel.add(new JLabel("Name :"), gbc);
+                    // indexing the position in the grid for the element
+                    gbc.gridx = 0; gbc.gridy = 0;
+                        idPanel.add(new JLabel("Name :"), gbc);
 
 
-                            gbc.gridx = 0; gbc.gridy = 1;
-                                idPanel.add(new JLabel("Age :"), gbc);
+                        gbc.gridx = 0; gbc.gridy = 1;
+                            idPanel.add(new JLabel("Age :"), gbc);
 
 
-                                gbc.gridx = 0; gbc.gridy = 2;
-                                    idPanel.add(new JLabel("Social security number :"), gbc);
+                            gbc.gridx = 0; gbc.gridy = 2;
+                                idPanel.add(new JLabel("Social security number :"), gbc);
 
 
-                                    gbc.gridx = 0; gbc.gridy = 3;
-                                        idPanel.add(new JLabel("Citizenship (country) :"), gbc);
+                                gbc.gridx = 0; gbc.gridy = 3;
+                                    idPanel.add(new JLabel("Citizenship (country) :"), gbc);
 
 
                 gbc.anchor = GridBagConstraints.CENTER;
