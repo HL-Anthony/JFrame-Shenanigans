@@ -11,119 +11,113 @@ public class JFrameIDcard {
     static public void idFrameGen () {
 
 
-        // Makes the frame
+        //-----------------------Frame declaration--------------------------
 
-        JFrame frame = new JFrame("ID card :");
-
-        //----------------------------------------------------------
-        // Sets Frame utility
-
-        frame.setLocationRelativeTo(null);
-        frame.isAlwaysOnTop();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        //----------------------------------------------------------
-            // Sets the frame properties
-
-            frame.setSize(400,250);
+        JFrame idFrame = new JFrame("ID card :");
 
 
-            //-----------------------------------------------------------
-                // creates a panel and sets the layout
+        //-----------------------Frame utility-------------------------------
+
+        idFrame.setLocationRelativeTo(null);
+        idFrame.isAlwaysOnTop();
+        idFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
-                JPanel panel = new JPanel(new GridBagLayout());
+        //-----------------------frame properties---------------------------
+
+        idFrame.setSize(400,250);
 
 
-                // needed to index positions and add 'padding'
-                GridBagConstraints gbc = new GridBagConstraints();
+        //-----------------------creates a panel and sets the layout---------
 
-                // adds a 'padding' around the elements in the grid
-                gbc.insets = new Insets(5,5,2,5);
+        JPanel panel = new JPanel(new GridBagLayout());
 
 
-                //-----------------------------------------------------------
-                    // creating elements  :
+        // needed to index positions and add 'padding'
+        GridBagConstraints gbc = new GridBagConstraints();
+
+        // adds a 'padding' around all elements in the grid
+        gbc.insets = new Insets(5,5,2,5);
 
 
-                        // creates the standard size I want on the elements
 
-                    Dimension standard = new Dimension(200, 25);
+        //-------------------------creating elements----------------------------
 
-                        // creates two text fields and sets the size to standard
 
-                    JTextField nameField = new JTextField();
-                    nameField.setPreferredSize(standard);
+                // creates the standard size I want on the elements
 
-                    JTextField ageField = new JTextField();
-                    ageField.setPreferredSize(standard);
+                Dimension standard = new Dimension(200, 25);
 
-                    JTextField socialField = new JTextField();
-                    socialField.setPreferredSize(standard);
 
-                        // creating a dropdown box for country's
+                // creates two text fields and sets the size to standard
 
-                    String[] county = {"","Norway", "USA", "NON of the above"} ;
-                    JComboBox<String> countrySelect = new JComboBox<>(county);
-                    countrySelect.setPreferredSize(standard);
+                JTextField nameField = new JTextField();
+                nameField.setPreferredSize(standard);
 
-                    //-----------------------------------------------------------
-                        // sets position of all the elements, and ads labels
+                JTextField ageField = new JTextField();
+                ageField.setPreferredSize(standard);
 
-                        gbc.anchor = GridBagConstraints.EAST;
+                JTextField socialField = new JTextField();
+                socialField.setPreferredSize(standard);
 
-                             // indexing the position in the grid for the element
-                                gbc.gridx = 0;
-                                gbc.gridy = 0;
+                    // creating a dropdown box for country's
 
-                            panel.add(new JLabel("Name :"), gbc);
+                String[] county = {"","Norway", "USA", "NON of the above"} ;
+                JComboBox<String> countrySelect = new JComboBox<>(county);
+                countrySelect.setPreferredSize(standard);
 
-                                gbc.gridx = 0;
-                                gbc.gridy = 1;
+        //----------------sets position of all the elements, and ads labels-------------------
 
-                            panel.add(new JLabel("Age :"), gbc);
+                // specifies how the element is in the cell
+                gbc.anchor = GridBagConstraints.EAST;
 
-                                gbc.gridx = 0;
-                                gbc.gridy = 3;
+                     // indexing the position in the grid for the element
+                    gbc.gridx = 0; gbc.gridy = 0;
+
+                    panel.add(new JLabel("Name :"), gbc);
+
+                        gbc.gridx = 0; gbc.gridy = 1;
+
+                        panel.add(new JLabel("Age :"), gbc);
+
+                            gbc.gridx = 0; gbc.gridy = 3;
 
                             panel.add(new JLabel("Citizenship (country) :"), gbc);
 
-                                gbc.gridx = 0;
-                                gbc.gridy = 2;
+                                gbc.gridx = 0; gbc.gridy = 2;
 
-                            panel.add(new JLabel("Social security number :"), gbc);
+                                panel.add(new JLabel("Social security number :"), gbc);
 
-                        gbc.anchor = GridBagConstraints.CENTER;
+                gbc.anchor = GridBagConstraints.CENTER;
 
-                                gbc.gridx = 1;
-                                gbc.gridy = 0;
+                    gbc.gridx = 1; gbc.gridy = 0;
 
-                            panel.add(nameField, gbc);
+                    panel.add(nameField, gbc);
 
-                                gbc.gridx = 1;
-                                gbc.gridy = 1;
 
-                            panel.add(ageField, gbc);
+                        gbc.gridx = 1; gbc.gridy = 1;
 
-                                gbc.gridx = 1;
-                                gbc.gridy = 2;
+                        panel.add(ageField, gbc);
+
+
+                            gbc.gridx = 1; gbc.gridy = 2;
 
                             panel.add(socialField,gbc);
 
-                                gbc.gridx = 1;
-                                gbc.gridy = 3;
 
-                            panel.add(countrySelect, gbc);
+                                gbc.gridx = 1; gbc.gridy = 3;
+
+                                panel.add(countrySelect, gbc);
 
 
-                            //----------------------------------------------------------
-                                // sets the necessary final statements
+                    //----------------------------------------------------------
+                        // sets the necessary final statements
 
-                                frame.add(panel);
+                        idFrame.add(panel);
 
-                                // this needs to be at the bottom for the content to be shown on the frame as the frame loads. (if not here : have to resize the frame to see content)
-                                frame.setVisible(true);
+                        // this needs to be at the bottom for the content to be shown on the frame as the frame loads. (if not here : have to resize the frame to see content)
+                        idFrame.setVisible(true);
 
-            }
+        }
 
 }
